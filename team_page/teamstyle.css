@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #008080;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #008080;
+  }
+  
+  .nav-links .active {
+    color: #008080;
+    font-weight: bold;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 5px;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background: #008080;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Introduction Section */
+  #introduction {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 100px 20px 20px; /* Offset for fixed navbar */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #introduction h1 {
+    font-size: 32px;
+    color: #008080;
+    margin-bottom: 15px;
+  }
+  
+  #introduction p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Team Section */
+  #team {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #team h2 {
+    font-size: 28px;
+    color: #008080;
+    margin-bottom: 20px;
+  }
+  
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between tiles */
+    margin: 0 auto;
+    max-width: 1200px; /* Center grid with a fixed width */
+  }
+  
+  .team-member {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .member-photo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .team-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .team-container {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
