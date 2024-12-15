@@ -98,7 +98,7 @@ body, html {
     width: 0;
     height: 100%;
     background: #00e6e6;
-    animation: load 10s linear forwards;
+    animation: load 5s linear forwards;
 }
 
 
