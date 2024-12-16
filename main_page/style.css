@@ -164,10 +164,11 @@ p{
 }
 
 .feature{
-    background-color:#11264d;
+    background-color:#16294e;
     border-radius: 8px;
     padding: 20px;
-    width: 180px;
+    width: 280px;
+    height: 300px;
     text-align: center;
 }
 h3{
@@ -175,10 +176,32 @@ h3{
 }
 
 .feature img{
-    width:100px;
+    width:200px;
     margin-bottom: 10px;
     border-radius: 8px;
 }
+/*____________________________________________________________________________*/
+.mobileimg {
+    display: flex;
+}
+
+.mobileimg img{
+    display: flex;
+    margin-left: 180px;
+    border-radius: 30px;
+    border: 2px solid none;
+    background-color: #008080;
+}
+.mobileimg h6{
+    margin-top: 250px;
+    color: white;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 100px;
+    
+}
+
 
 .Apps{
     display: flex;
@@ -186,18 +209,21 @@ h3{
     gap: 20px;
     flex-wrap:wrap;
     padding: 10px;
+    margin-left: 90px;
 }
 
-.app{
-    padding: 20px;
-    text-align: center;
-}
-.app img{
-    width: 50px;
-    margin-bottom: 10px;
+
+.img1 img{
+    width: 220px;
+
     
 }
-.app:hover{
+.img2 img{
+    width: 200px;
+
+    
+}
+.Apps img:hover{
     transform: translate(-5px,-10px);
 }
 
@@ -209,6 +235,9 @@ h6{
 .top{
     float: right;
     cursor: pointer;
+}
+.top img{
+    width: 100px;
 }
 
 /* ---------Footer ---*/
