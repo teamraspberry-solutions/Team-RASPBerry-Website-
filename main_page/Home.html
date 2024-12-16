@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Kyan</title>
     <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href="/main_page/Nav/Nav.css">
 </head>
 <body>
     <nav>
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="/main_page/images/Kyan.png" alt="Logo">
+        </div>
         <ul class="nav-links">
             <li><a href="/main_page/Home.html">Home</a></li>
-            <li><a href="#about">About Us</a></li>
             <li><a href="/team_page/team.html">Team</a></li>
+            <li><a href="/sponsorship_page/sponsorship.html">Sponsorship</a></li>
             <li><a href="/gallery_page/gallery.html">Gallery</a></li>
-            <li><a href="/Contact Us/contact.html">Contact Us</a></li>
             <li><a href="/features_page/features.html">Features</a></li>
+            <li><a href="/Contact Us/contact.html">Contact Us</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -25,8 +28,24 @@
     </nav>
     
     <main id="backtotop">
-        
-        <section id="about" ><br/>
+
+        <section class="hero">
+            <div class="carousel">
+                <div class="slide" style="background-image: url('/gallery_page/Images/teaser_image.jpg');"></div>
+                <div class="slide active" style="background-image: url('/gallery_page/Images/dialog_meeting1.jpg');"></div>
+                <div class="slide" style="background-image: url('/gallery_page/Images/dialog_meeting2.jpg');"></div>
+            </div>
+            <div class="overlay">
+                <h1>Welcome to Project Kyan</h1>
+                <p>Innovating learning and productivity for everyone.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </section>
+    
+        <section id="about">
+            <br>
+            <br>
+            <br>
             <h1>About Us</h1>
             <p>"Welcome to Project Kayan! We're passionate about creating innovative solutions that enhance learning and productivity. Our smart desk robot is a unique blend of functionality and intelligence.<br><br>
                 Everyday Use: Experience a more organized and efficient workspace. Our robot can help with tasks like scheduling reminders, managing your to-do lists, and even controlling smart home devices.<br><br>
@@ -99,13 +118,12 @@
 
     <footer>
         <p>&copy; 2024 Project Kyan </p>
-        <p>
             <a href="#about">About us</a>
             <a href="/team_page/team.html">Team</a>
             <a href="/Contact Us/contact.html">Contact Us</a>
             <a href="/features_page/features.html">Features</a>
         </p>
     </footer>
-    
+    <script src="/main_page/Nav/Nav.js"></script>
 </body>
 </html>

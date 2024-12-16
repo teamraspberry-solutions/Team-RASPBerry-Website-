@@ -10,60 +10,6 @@
     background: #f4f4f4;
     line-height: 1.6;
   }
-  
-  /* Navigation Bar */
-  nav {
-    background: white;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    color: #008080;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #008080;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #008080;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
 
   
   /* Introduction Section */
@@ -71,14 +17,14 @@
     padding: 20px;
     text-align: center;
     background-color: #ffffff;
-    margin: 100px 20px 20px; /* Offset for fixed navbar */
+    margin: 20px 20px 20px; /* Offset for fixed navbar */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   #introduction h1 {
     font-size: 32px;
-    color: #008080;
+    color: #003366;
     margin-bottom: 15px;
   }
   
@@ -96,7 +42,7 @@
   
   #team h2 {
     font-size: 28px;
-    color: #008080;
+    color: #003366;
     margin-bottom: 20px;
   }
   
