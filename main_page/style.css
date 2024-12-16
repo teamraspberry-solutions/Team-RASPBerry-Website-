@@ -202,6 +202,7 @@ h3{
     align-items: center; /* Vertically align the images */
     gap: 20px; /* Space between the app images */
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .img1 img {
