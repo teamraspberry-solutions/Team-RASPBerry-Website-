@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team RASPBerry</title>
+    <link rel="stylesheet" href="gallery_style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Your Logo</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#sponsorship">Sponsorship</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#features">Features</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Scrollable Grid-Style Gallery -->
+        <section class="grid-gallery">
+            <h2 id="gallery-topic">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item"><img src="teaser_image.jpg" alt="Image 1"></div>
+                <div class="gallery-item"><img src="dialog_meeting.jpg" alt="Image 2"></div>
+                <div class="gallery-item"><img src="test.jpg" alt="Image 3"></div>
+                <div class="gallery-item"><img src="dialog_meeting.jpg" alt="Image 4"></div>
+                <div class="gallery-item"><img src="teaser_image.jpg" alt="Image 5"></div>
+                <div class="gallery-item"><img src="test.jpg" alt="Image 6"></div>
+                <div class="gallery-item"><img src="teaser_image.jpg" alt="Image 3"></div>
+                <div class="gallery-item"><img src="dialog_meeting.jpg" alt="Image 4"></div>
+                <div class="gallery-item"><img src="test.jpg" alt="Image 5"></div>
+                <div class="gallery-item"><img src="dialog_meeting.jpg" alt="Image 6"></div>
+                <div class="gallery-item"><img src="teaser_image.jpg" alt="Image 3"></div>
+                <div class="gallery-item"><img src="test.jpg" alt="Image 4"></div>
+                <div class="gallery-item"><img src="teaser_image.jpg" alt="Image 5"></div>
+                <div class="gallery-item"><img src="dialog_meeting.jpg" alt="Image 6"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Gallery -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" class="lightbox-content" src="" alt="">
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        let currentIndex = 0;
+
+        // Open lightbox
+        function openLightbox(index) {
+            lightbox.style.display = 'flex';
+            currentIndex = index;
+            updateLightboxImage();
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        // Update lightbox image
+        function updateLightboxImage() {
+            const imageSrc = galleryItems[currentIndex].src;
+            lightboxImage.src = imageSrc;
+        }
+
+        // Navigate to previous image
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightboxImage();
+        }
+
+        // Navigate to next image
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateLightboxImage();
+        }
+
+        // Add event listeners to thumbnails
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+    
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+    
+    
+            burger.addEventListener('click', () => {
+                // Toggle Nav
+                nav.classList.toggle('nav-active');
+    
+                // Animate Links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                     } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+    
+                // Burger Animation
+                burger.classList.toggle('toggle');
+    
+            
+    
+            
+            });
+        }
+    
+        navSlide();
+
+
+
+
+    
+    </script>
+</body>
+</html>
