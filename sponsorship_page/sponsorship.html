@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsorship - Robot Kyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Robot Kyan</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="sponsorship.html">Sponsorship</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#features">Features</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="sponsorship" class="sponsorship-section">
+            <div class="form-container">
+                <h2>Partner with Robot Kyan</h2>
+                <p class="form-intro">Join us in revolutionizing educational technology with Robot Kyan - the AI-powered study companion.</p>
+                
+                <form id="sponsorshipForm" action="submit.php" method="POST">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person</label>
+                        <input type="text" id="contactPerson" name="contactPerson" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sponsorshipType">Sponsorship Type</label>
+                        <select id="sponsorshipType" name="sponsorshipType" required>
+                            <option value="">Select Sponsorship Type</option>
+                            <option value="financial">Financial Partnership</option>
+                            <option value="technical">Technical Partnership</option>
+                            <option value="educational">Educational Institution Partnership</option>
+                            <option value="distribution">Distribution Partnership</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Why Would You Like to Partner With Robot Kyan?</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Sponsorship Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Robot Kyan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="sponsorship.js"></script>
+</body>
+</html>
