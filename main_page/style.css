@@ -181,52 +181,103 @@ h3{
     border-radius: 8px;
 }
 /*____________________________________________________________________________*/
-.mobileimg {
-    display: flex;
-}
-
-.mobileimg img{
-    display: flex;
-    margin-left: 180px;
-    border-radius: 30px;
-    border: 2px solid none;
-    background-color: #008080;
-}
-.mobileimg h6{
-    margin-top: 250px;
-    color: white;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 100;
-    margin-left: 100px;
-    
-}
-
-
-.Apps{
+/* General Section Styling */
+.download-section {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap:wrap;
-    padding: 10px;
-    margin-left: 90px;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
+/* Wrapper for Image and Content */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* Space between image and content */
+    max-width: 1200px;
+    width: 100%;
+    border-left: 2px solid #ddd; /* Line between sections */
+    padding-left: 20px;
+}
 
-.img1 img{
-    width: 220px;
+/* Mobile App Image */
+.mobile-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    
+/* Content Styling */
+.content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content h1 {
+    text-align: left;
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.content p {
+    text-align: left;
+    font-size: 16px;
+    color: #1A1A1A;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* App Store Images */
+.Apps {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: left; /* Center-align images horizontally */
+    align-items: center; /* Vertically align the images */
+    gap: 20px; /* Space between the app images */
+    margin-top: 20px;
+}
+
+.img1 img {
+    width: 150px; /* Adjust size as needed */
+    transition: transform 0.3s; /* Add hover animation */
 }
 .img2 img{
-    width: 200px;
-
-    
-}
-.Apps img:hover{
-    transform: translate(-5px,-10px);
+    width: 130px;
+    transition: transform 0.3s;
 }
 
+.img1 img:hover, .img2 img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .mobile-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .Apps {
+        justify-content: center;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------------------*/
 h6{
     color: white;
     
