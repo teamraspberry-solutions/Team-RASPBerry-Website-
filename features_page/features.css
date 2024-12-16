@@ -6,11 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: white;
+    background: #e6f0ff;
+    color: #1A1A1A;
 }
 
 nav {
-    background: white;
+    background: #003366;
     height: 80px;
     width: 100%;
     display: flex;
@@ -23,10 +24,20 @@ nav {
 }
 
 .logo {
-    color: #008080;
-    font-size: 24px;
-    font-weight: bold;
+    height: 60px;
+    width: 110px;
+    position: relative;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
 }
+
+.logo img {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+}
+
 
 .nav-links {
     display: flex;
@@ -39,7 +50,8 @@ nav {
 }
 
 .nav-links a {
-    color: #333;
+
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -69,13 +81,22 @@ main {
 }
 
 footer {
-    background: #666;
-    color: white;
+    background: black;
+    color: #fff;
     text-align: center;
     padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
@@ -183,15 +204,15 @@ header {
   }
   
   .feature-box h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom:8px;
-    color: #333;
+    color: #1A1A1A;
     text-align: center;
   }
   
   .feature-box p {
     font-size: 12px;
-    color: #555;
+    color: #1A1A1A;
     padding-top: 50px;
     text-align: center;
 
@@ -211,6 +232,7 @@ header {
       align-items: center;
     }
   }
+  
   
 
   
