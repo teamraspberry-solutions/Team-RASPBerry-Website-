@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background: white;
 }
 html{
@@ -217,6 +217,11 @@ h3{
 .img1 img:hover, .img2 img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
+
+.nav-links a.active {
+    color: #008080;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

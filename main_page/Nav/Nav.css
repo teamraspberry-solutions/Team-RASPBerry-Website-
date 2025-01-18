@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -161,4 +162,8 @@ footer a:hover {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.nav-links a.active {
+    color: #008080;
 }
