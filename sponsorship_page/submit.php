@@ -15,33 +15,31 @@ try {
 
     $to = "teamraspberry6@gmail.com";
     $subject = "New Robot Kyan Sponsorship Request";
-    
+
     $emailContent = "
     New Sponsorship Request Details:
-    
+
     Company Name: {$_POST['companyName']}
     Contact Person: {$_POST['contactPerson']}
     Email: {$_POST['email']}
     Phone: {$_POST['phone']}
     Sponsorship Type: {$_POST['sponsorshipType']}
-    
+
     Message:
     {$_POST['message']}
     ";
-    
-    $headers = [
-        'From' => $_POST['email'],
-        'Reply-To' => $_POST['email'],
-        'X-Mailer' => 'PHP/' . phpversion(),
-        'Content-Type' => 'text/plain; charset=UTF-8'
-    ];
-    
+
+    // Convert headers array to a string
+    $headers = "From: {$_POST['email']}\r\n" .
+               "Reply-To: {$_POST['email']}\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
     if (mail($to, $subject, $emailContent, $headers)) {
         echo json_encode(['success' => true]);
     } else {
         throw new Exception("Failed to send email");
     }
-    
+
 } catch (Exception $e) {
     http_response_code(400);
     echo json_encode([
