@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('sponsorshipForm');
-    
+
     // Stagger form group animations
     const formGroups = document.querySelectorAll('.form-group');
     formGroups.forEach((group, index) => {
@@ -9,28 +9,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         const submitBtn = form.querySelector('.submit-btn');
         submitBtn.innerHTML = '<span class="spinner"></span> Submitting...';
         submitBtn.disabled = true;
 
         const formData = new FormData(form);
 
-        fetch('submit.php', {
+        fetch(form.action, {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
+        .then(response => {
+            if (response.ok) {
                 showNotification('Success! Thank you for your interest in Robot Kyan.', 'success');
                 form.reset();
             } else {
-                throw new Error(data.message || 'Submission failed');
+                showNotification('Submission failed. Please try again later.', 'error');
             }
         })
-        .catch(error => {
-            showNotification(error.message, 'error');
+        .catch(() => {
+            showNotification('There was a problem submitting the form. Please try again.', 'error');
         })
         .finally(() => {
             submitBtn.innerHTML = 'Submit Sponsorship Request';
@@ -42,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.textContent = message;
-        
+
         document.body.appendChild(notification);
-        
+
         setTimeout(() => {
             notification.classList.add('show');
             setTimeout(() => {
